@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="msg" class="basic06.MessageBeanImpl" init-method="init" destroy-method="finish"><!-- id는 main에서 설정, class , init-method는 내가 만든 init메서드를 초기 설정하기 위해서 필요함-->
+	<constructor-arg value="홍길동"></constructor-arg>
+	<constructor-arg value="18"></constructor-arg>
+	<constructor-arg value="안녕하세요"></constructor-arg>
+	<property name="greeting" value="메리크리스마스~~"></property><!-- 이부분이 처리되고 been의 id가 적용됨 -->
+	
+	
+</bean>
+</beans>

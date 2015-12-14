@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.1.xsd">
+
+<context:annotation-config/><!-- 자동주입 할때 필요함 -->
+
+<bean id="outputter" class="basic09.FileOutputter"><!-- @Qualifier를 사용하지 않을거면 이름을 맞춰줘라! -->
+	<property name="filePath" value="F:\javastudy\out3.txt"/>
+</bean>
+
+<bean id="outputter2" class="basic09.FileOutputter">
+	<property name="filePath" value="F:\javastudy\out4.txt"/>
+</bean>
+
+<bean id="msgKr" class="basic09.MessageBeanKr">
+<property name="greeting" value="안녕하시요"></property>
+<property name="name" value="박세용"></property>
+<!--<property name="outputter" ref="outputter1"></property>--><!--원래 수동으로 직접 주입하는 방법을 해야하지만 자동주입으로 인하여 필요없어진다. -->
+</bean>
+<bean id="msgEn" class="basic09.MessageBeanEn">
+<constructor-arg value="hi~ hello"></constructor-arg>
+<constructor-arg value="Park se yeon"></constructor-arg>
+</bean>
+</beans>

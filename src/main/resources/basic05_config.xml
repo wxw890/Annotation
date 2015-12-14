@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<import resource="classpath:basic05_config2.xml"/>
+
+	<bean id="outputter" class="basic05.FileOutputter"><!-- 클래스라 생각하자(싱글톤이다, 즉 하나의 인스턴스만 생성) -->
+		<property name="filePath" value="F:\javastudy\out.txt"></property><!-- property는 클래스의 메서드와 비슷하다고 봐야함 -->
+	</bean>
+	
+</beans>
