@@ -7,8 +7,8 @@ import org.springframework.beans.factory.annotation.Qualifier;
 public class MessageBeanKr implements MessageBean {
 	private String greeting;
 	private String name;
-	@Autowired//변수 위에다 선언하면 아예 setOutputter()메스가 필요 없게된다.
-	private Outputter outputter; 
+	@Autowired//변수 위에다 선언하면 아예 setOutputter()메스가 필요 없게된다. 또한 이것은 자동 주입을 위한 annotation이다.
+	private Outputter outputter;//참조확인 내용 
 	
 	@Autowired
 	

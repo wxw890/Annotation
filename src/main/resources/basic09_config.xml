@@ -20,6 +20,7 @@
 <property name="name" value="박세용"></property>
 <!--<property name="outputter" ref="outputter1"></property>--><!--원래 수동으로 직접 주입하는 방법을 해야하지만 자동주입으로 인하여 필요없어진다. -->
 </bean>
+
 <bean id="msgEn" class="basic09.MessageBeanEn">
 <constructor-arg value="hi~ hello"></constructor-arg>
 <constructor-arg value="Park se yeon"></constructor-arg>

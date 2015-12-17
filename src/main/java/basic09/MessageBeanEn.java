@@ -12,7 +12,7 @@ public class MessageBeanEn implements MessageBean {
 	
 	@Autowired
 	public MessageBeanEn(String greeting, String name,
-		@Qualifier("outputter2") Outputter outputter){
+		@Qualifier("outputter2") Outputter outputter){ //@Qualifier는 지정된 아이디 outputter2로 부터 주입을 받고 싶어서 사용됨 즉,outputter과 구분하기 위해서 사용됨  
 		this.greeting = greeting;
 		this.name = name;
 		this.outputter = outputter;
@@ -24,5 +24,6 @@ public class MessageBeanEn implements MessageBean {
 	public void sayHello() {
 		// TODO Auto-generated method stub
 		System.out.println(greeting+"-!^~^!-"+name);
+		System.out.println("참조확인:"+ outputter);
 	}
 }
